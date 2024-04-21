@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("mike", "somu", "ranu", "tinku", "jack");
-        List<String> sortedName = names.stream().sorted().collect(Collectors.toList());
-        System.out.println(sortedName);
+        List<Integer> numbers = Arrays.asList(13, 20, 15, 23, 69, 100, 1, 55);
+        List<Integer> sortedNumbers = numbers.stream().sorted().collect(Collectors.toList());
+        System.out.println(sortedNumbers);
     }
 }
