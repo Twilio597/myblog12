@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        Consumer<Integer> result = number-> System.out.println(number);
-        result.accept(100);
+        List<String> names = Arrays.asList("somu", "ranu", "tinku", "jack");
+        Consumer<String> val = name-> System.out.println(name);
+        names.forEach(val);
     }
 }
