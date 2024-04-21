@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        List<Integer> data = Arrays.asList(10, 20, 30, 40, 50, 90, 100);
-        List<Integer> newData = data.stream().map(i -> i -5).collect(Collectors.toList());
+        List<String> data = Arrays.asList("mike","somu","ranu","tinku","jack");
+        List<String> newData = data.stream().map(s->s.toUpperCase()).collect(Collectors.toList());
         System.out.println(newData);
     }
 }
