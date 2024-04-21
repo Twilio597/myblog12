@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("somu", "ranu", "tinku", "jack");
-        Consumer<String> val = name-> System.out.println(name);
-        names.forEach(val);
+        List<String> fruits = Arrays.asList("orange", "apple", "banana", "pineapple", "grapes");
+        Consumer<String> val = fruit-> System.out.println(fruit);
+        fruits.forEach(val);
     }
 }
