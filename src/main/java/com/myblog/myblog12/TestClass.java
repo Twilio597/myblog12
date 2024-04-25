@@ -15,15 +15,15 @@ public class TestClass {
                 new Employee("sam",34,"bangalore")
         );
 
-        Map<Integer, List<Employee>> collect = employees.stream().collect(Collectors.groupingBy(e -> e.getAge()));
-        for(Map.Entry<Integer,List<Employee>> entry:collect.entrySet()){
-            Integer age = entry.getKey();
+        Map<String, List<Employee>> collect = employees.stream().collect(Collectors.groupingBy(e -> e.getCity()));
+        for(Map.Entry<String,List<Employee>> entry:collect.entrySet()){
+            String city = entry.getKey();
             List<Employee> employeesWithAge = entry.getValue();
-            System.out.println("age"+age+"---");
+            System.out.println("city:"+city+"---");
 
             for(Employee e:employeesWithAge){
                 System.out.println(e.getName());
-                System.out.println(e.getCity());
+                System.out.println(e.getAge());
             }
         }
 
