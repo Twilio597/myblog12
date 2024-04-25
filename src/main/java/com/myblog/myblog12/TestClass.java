@@ -7,15 +7,23 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        List<Login> logins = Arrays.asList(new Login("mike","test"), new Login("somu","test"),new Login("ranu","test"));
-        List<LoginDto> dtos = logins.stream().map(login -> mapToDto(login)).collect(Collectors.toList());
-        System.out.println(dtos);
+        List<Employee> employees = Arrays.asList(
+                new Employee("Sam",30,"chennai"),
+                new Employee("Adam",25,"Mumbai"),
+                new Employee("Jack",32,"Bangalore"),
+                new Employee("Stallin",34,"chennai")
+                );
+
+        List<Employee> emps = employees.stream().filter(emp -> emp.getAge() > 30).collect(Collectors.toList());
+
+        for(Employee e: emps){
+            System.out.println(e.getName());
+            System.out.println(e.getCity());
+            System.out.println(e.getAge());
+        }
 
     }
-    static LoginDto mapToDto(Login login){
-        LoginDto dto = new LoginDto();
-        dto.setUsername(login.getUsername());
-        dto.setPassword(login.getPassword());
-        return dto;
-    }
+
+
+
     }
