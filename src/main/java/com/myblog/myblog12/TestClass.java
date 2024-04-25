@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 
 public class TestClass {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Ajay", "Arun", "Manoj", "Madhav", "Abhi");
-        List<String> name = names.stream().filter(n -> n.startsWith("A")).collect(Collectors.toList());
-        System.out.println(name);
+        List<Integer> numbers = Arrays.asList(10, 20, 12, 3, 15, 17,18,8,14);
+        List<Integer> data = numbers.stream().filter(n1 -> n1 % 2 == 0).map(n2 -> n2 * n2).collect(Collectors.toList());
+        System.out.println(data);
 
 
     }
